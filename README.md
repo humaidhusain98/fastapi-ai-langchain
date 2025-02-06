@@ -37,16 +37,17 @@ pip install -r requirements.txt
 ```
 
 ### 4.Set Up Environment Variables
-Create a .env file in the root directory and add the details given in the .env.example file and fill the details
+Create a .env file in the root directory and add the details given in the .env.example file and fill the details. 
+1.OpenAI API Key: Go to https://platform.openai.com/ and generate an API key
+2.Gemini API Key: Go to https://aistudio.google.com/app/apikey and generate an API key
 ```env
 OPENAI_API_KEY=
 GEMINI_API_KEY=
-MONGODB_URL=
 ```
 
 ## 🚀 Start Instructions
 ### 1. Run the FastAPI Development Server
-Use the following command to run the development server
+Use the following command in root folder terminal to run the development server
 ```bash
 fastapi dev main.py
 ```
@@ -60,5 +61,12 @@ http://127.0.0.1:8000
 ### 3. Explore the Documentation
 FastAPI automatically generates interactive API docs:
 - Swagger UI: http://127.0.0.1:8000/docs
+
+### 4. Run the Production Server
+Use the following command in root folder terminal to run the production server
+```bash
+fastapi run main.py
+```
+
 
 
