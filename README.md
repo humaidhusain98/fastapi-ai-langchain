@@ -13,6 +13,12 @@ This Repository contains a Fastapi server which has apis to use models like chat
 - 🧪 Ready for development and production setups
 
 ---
+## Table of Contents
+
+- [Installation Instructions](#api-keys)
+- [All Endpoints - Required params](#all-endpoints-required-params)
+- [How to start the Application](#how-to-start-application)
+- [Important Details](#important-details)
 
 ## 📦 Installation Instructions
 
