@@ -80,7 +80,7 @@ Signup API is used to register a new user from dashboard, once the new user ente
 - userName
 - password
 
-**Syntax**
+**Endpoint**
 
 ```
 http://localhost:3000/signup
@@ -95,7 +95,7 @@ When a previous user login on the dashboard with the login details and post this
 - userName
 - password
 
-**Syntax**
+**Endpoint**
 
 ```
 http://localhost:3000/login
@@ -109,7 +109,7 @@ Deploy an CFA Account by sending a deploy post API request with passing the para
 
 - cfa
 
-**Syntax**
+**Endpoint**
 
 ```
 http://localhost:3000/deploy:cfa
@@ -125,7 +125,7 @@ Transfer of funds can be done by providing the params like To(to whom) address, 
 - value
 - cfa
 
-**Syntax**
+**Endpoint**
 
 ```
 http://localhost:3000/transferSCW
