@@ -39,9 +39,9 @@ pip install -r requirements.txt
 ### 4.Set Up Environment Variables
 Create a .env file in the root directory and add the details given in the .env.example file and fill the details. 
 <br />
-1.OpenAI API Key: Go to https://platform.openai.com/ and generate an API key
+1. OpenAI API Key: Go to https://platform.openai.com/ and generate an API key
 <br />
-2.Gemini API Key: Go to https://aistudio.google.com/app/apikey and generate an API key
+2. Gemini API Key: Go to https://aistudio.google.com/app/apikey and generate an API key
 ```env
 OPENAI_API_KEY=
 GEMINI_API_KEY=
