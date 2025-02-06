@@ -15,12 +15,12 @@ This Repository contains a Fastapi server which has apis to use models like chat
 ---
 ## Table of Contents
 
-- [Installation Instructions](#api-keys)
+- [Installation Instructions](#installation-instructions)
+- [How to start the Application](#start-instructions)
 - [All Endpoints - Required params](#all-endpoints-required-params)
-- [How to start the Application](#how-to-start-application)
 - [Important Details](#important-details)
 
-## 📦 Installation Instructions
+## Installation Instructions
 
 ### 1. Clone the Repository
 ```bash
@@ -52,7 +52,7 @@ OPENAI_API_KEY=
 GEMINI_API_KEY=
 ```
 
-## 🚀 Start Instructions
+## Start Instructions
 ### 1. Run the FastAPI Development Server
 Use the following command in root folder terminal to run the development server
 ```bash
