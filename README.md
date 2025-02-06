@@ -69,5 +69,66 @@ Use the following command in root folder terminal to run the production server
 fastapi run main.py
 ```
 
+## All Endpoints - Required params
+
+### 1. Signup(POST)
+
+Signup API is used to register a new user from dashboard, once the new user enters the details and a request to signup API is post to make a database entry for this new user created.
+
+**_Params_**
+
+- userName
+- password
+
+**Syntax**
+
+```
+http://localhost:3000/signup
+```
+
+### 2. Login(POST)
+
+When a previous user login on the dashboard with the login details and post this login API request to fetch the details from backend and allow user to transact.
+
+**_Params_**
+
+- userName
+- password
+
+**Syntax**
+
+```
+http://localhost:3000/login
+```
+
+### 3. Deploy Wallet(POST)
+
+Deploy an CFA Account by sending a deploy post API request with passing the parameters Counter Factual (CFA address of user).
+
+**_Params_**
+
+- cfa
+
+**Syntax**
+
+```
+http://localhost:3000/deploy:cfa
+```
+
+### 4. Transfer Funds(POST)
+
+Transfer of funds can be done by providing the params like To(to whom) address, Value(how much you send) and cfa(of the user who is sending the funds) and sending the post request.
+
+**_Params_**
+
+- to
+- value
+- cfa
+
+**Syntax**
+
+```
+http://localhost:3000/transferSCW
+```
 
 
