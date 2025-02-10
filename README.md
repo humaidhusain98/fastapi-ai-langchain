@@ -108,7 +108,7 @@ This api exposes OpenAI's chatgpt-4o-mini model to be invoked and consumed by Ap
 http://localhost:8000/models/gpt-4o-mini
 ```
 
-**_Sample Response**
+**Sample Response**
 ```json
 {
     "httpCode": 200,
