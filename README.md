@@ -193,12 +193,12 @@ curl --location 'http://localhost:8000/rag/generateEmbeddingsFromTextFile' \
 ```json
 {
     "httpCode": 409,
-    "msg": "vetor store in chroma_dbalready exists",
+    "msg": "vetor store in chroma_db already exists",
     "data": ""
 }
 ```
 
-**Sample Successful Response **
+**Sample Successful Response**
 ```json
 {
     "httpCode": 201,
