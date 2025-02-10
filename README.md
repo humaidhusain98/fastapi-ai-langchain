@@ -94,7 +94,7 @@ It will display the following JSON Response
 {"message": "server started on port 8000"}
 ```
 
-### 2. Models - GPT-4o-MINI API(POST)
+### 2. Models : GPT 4o MINI API(POST)
 
 This api exposes OpenAI's chatgpt-4o-mini model to be invoked and consumed by Applications. It takes the prompt in the request body and generates a response by the gpt-4o-mini model and returns back the results.
 
@@ -125,35 +125,85 @@ curl --location 'http://localhost:8000/models/gpt-4o-mini' \
     "data": "81 divided by 9 is 9"
 }
 ```
+### 3. Models : GEMINI 1.5 PRO API(POST)
 
-### 3. Deploy Wallet(POST)
-
-Deploy an CFA Account by sending a deploy post API request with passing the parameters Counter Factual (CFA address of user).
+This api exposes Gemini 1.5 Pro model to be invoked and consumed by Applications. It takes the prompt in the request body and generates a response by the gpt-4o-mini model and returns back the results.
 
 **_Params_**
 
-- cfa
+- prompt
 
 **Endpoint**
 
 ```
-http://localhost:3000/deploy:cfa
+http://localhost:8000/models/gemini-1.5-pro
 ```
 
-### 4. Transfer Funds(POST)
+**Curl Example**
+```curl
+curl --location 'http://localhost:8000/models/gemini-1.5-pro' \
+--header 'Content-Type: application/json' \
+--data '{
+	"prompt": "What is 81 divided by 9"
+}'
+``` 
 
-Transfer of funds can be done by providing the params like To(to whom) address, Value(how much you send) and cfa(of the user who is sending the funds) and sending the post request.
+**Example Response**
+```json
+{
+    "httpCode": 200,
+    "msg": "Successfully Generated Response",
+    "data": "81 divided by 9 is 9"
+}
+```
+
+### 4. RAG Embeddings Generation from Text File
+
+This api is used to generate embeddings from a text file and store the embeddings vector store in chroma db inside the embeddings_db/{outputFileName} folder. The api fetches the file from the rag_train_data/{inputFileName}.txt file and creates embeddings using the  . To generate the embeddings we use OpenAI's text-embedding-3-small model  
 
 **_Params_**
 
-- to
-- value
-- cfa
+- inputFileName
+- outputFileName
 
 **Endpoint**
 
 ```
-http://localhost:3000/transferSCW
+http://localhost:8000/rag/generateEmbeddingsFromTextFile
 ```
 
+**Curl Example**
+```curl
+curl --location 'http://localhost:8000/rag/generateEmbeddingsFromTextFile' \
+--header 'Content-Type: application/json' \
+--data '{
+    "inputFileName":"odyssey.txt",
+    "outputFileName":"chroma_db"
+}'
+```
+**Sample File Not Found Response**
+```json
+{
+    "httpCode": 404,
+    "msg": "dasd.txt not found",
+    "data": ""
+}
+```
+**Sample Vector Store Already Exists for output name Response**
+```json
+{
+    "httpCode": 409,
+    "msg": "vetor store in chroma_dbalready exists",
+    "data": ""
+}
+```
+
+**Sample Successful Response **
+```json
+{
+    "httpCode": 201,
+    "msg": "Successfully Created Vector Store",
+    "data": "Chroma db written to /Users/mdhumaidhusain/python-ai/fastapi-server/emdeddings_db/chroma_db"
+}
+```
 
