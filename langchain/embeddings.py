@@ -10,7 +10,7 @@ def generateEmbeddingsFromTextFile(inputFileName,outputFileName):
     try:
         current_dir = os.getcwd()
         file_path = os.path.join(current_dir, "rag_train_data", inputFileName)
-        persistent_directory = os.path.join(current_dir, "emdeddings_db", outputFileName)
+        persistent_directory = os.path.join(current_dir, "embeddings_db", outputFileName)
 
         # Check if the Chroma vector store already exists
         if not os.path.exists(persistent_directory):
