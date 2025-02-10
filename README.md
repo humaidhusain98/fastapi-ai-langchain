@@ -96,15 +96,7 @@ It will display the following JSON Response
 
 ### 2. Models - GPT-4o-MINI API(POST)
 
-This api exposes OpenAI's chatgpt-4o-mini model to be invoked and consumed by Applications. It takes the prompt in the request body and generates a response by the gpt-4o-mini model and returns back the results. The response format is 
-Example 
-```json
-{
-    "httpCode": 200,
-    "msg": "Successfully Generated Response",
-    "data": "81 divided by 9 is 9"
-}
-```
+This api exposes OpenAI's chatgpt-4o-mini model to be invoked and consumed by Applications. It takes the prompt in the request body and generates a response by the gpt-4o-mini model and returns back the results.
 
 **_Params_**
 
@@ -114,6 +106,15 @@ Example
 
 ```
 http://localhost:8000/models/gpt-4o-mini
+```
+
+**_Sample Response**
+```json
+{
+    "httpCode": 200,
+    "msg": "Successfully Generated Response",
+    "data": "81 divided by 9 is 9"
+}
 ```
 
 ### 3. Deploy Wallet(POST)
