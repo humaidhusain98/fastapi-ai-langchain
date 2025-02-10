@@ -108,6 +108,15 @@ This api exposes OpenAI's chatgpt-4o-mini model to be invoked and consumed by Ap
 http://localhost:8000/models/gpt-4o-mini
 ```
 
+**Curl Sample**
+```curl
+curl --location 'http://localhost:8000/models/gpt-4o-mini' \
+--header 'Content-Type: application/json' \
+--data '{
+	"data": "What is 81 divided by 9"
+}'
+```
+
 **Sample Response**
 ```json
 {
