@@ -78,13 +78,19 @@ fastapi run main.py
 
 ### 1. Server Check(GET)
 
-This api is used to check if the server is running correctly. It will return a JSON object {"message": "server started on port 8000"} if the server starts up correctly.
+This api is used to check if the server is running correctly.
 
 
 **Endpoint**
 
 ```
 http://localhost:8000
+```
+
+**Response**
+It will display the following JSON Response
+```json
+{"message": "server started on port 8000"}
 ```
 
 ### 2. Models - GPT-4o-MINI API(POST)
