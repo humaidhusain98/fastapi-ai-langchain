@@ -76,34 +76,37 @@ fastapi run main.py
 
 ## All Endpoints - Required params
 
-### 1. Signup(POST)
+### 1. Server Check(GET)
 
-Signup API is used to register a new user from dashboard, once the new user enters the details and a request to signup API is post to make a database entry for this new user created.
+This api is used to check if the server is running correctly. It will return a JSON object {"message": "server started on port 8000"} if the server starts up correctly.
 
-**_Params_**
-
-- userName
-- password
 
 **Endpoint**
 
 ```
-http://localhost:3000/signup
+http://localhost:8000
 ```
 
-### 2. Login(POST)
+### 2. Models - GPT-4o-MINI API(POST)
 
-When a previous user login on the dashboard with the login details and post this login API request to fetch the details from backend and allow user to transact.
+This api exposes OpenAI's chatgpt-4o-mini model to be invoked and consumed by Applications. It takes the prompt in the request body and generates a response by the gpt-4o-mini model and returns back the results. The response format is 
+Example 
+```json
+{
+    "httpCode": 200,
+    "msg": "Successfully Generated Response",
+    "data": "81 divided by 9 is 9"
+}
+```
 
 **_Params_**
 
-- userName
-- password
+- prompt
 
 **Endpoint**
 
 ```
-http://localhost:3000/login
+http://localhost:8000/models/gpt-4o-mini
 ```
 
 ### 3. Deploy Wallet(POST)
