@@ -7,8 +7,8 @@ model = ChatOpenAI(model="gpt-4o-mini")
 
 def generateModelAnswerFromStringPrompt(prompt):
     try:
-        # result = model.invoke(prompt)
-        result=  testRes(prompt)
+        result = model.invoke(prompt)
+        # result=  testRes(prompt)
         print(f'{result}')
         response = Response(status.HTTP_200_OK,"Successfully Generated Response",result.content); 
         print(response)
