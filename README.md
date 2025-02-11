@@ -76,10 +76,11 @@ fastapi run main.py
 
 ## All Endpoints - Required params
 
-### 1. Server Check(GET)
+### 1. Server Check API
 
 This api is used to check if the server is running correctly.
 
+**HTTP Method Type** : GET
 
 **Endpoint**
 
@@ -94,9 +95,11 @@ It will display the following JSON Response
 {"message": "server started on port 8000"}
 ```
 
-### 2. Models : GPT 4o MINI API(POST)
+### 2. Models : GPT 4o MINI API
 
 This api exposes OpenAI's chatgpt-4o-mini model to be invoked and consumed by Applications. It takes the prompt in the request body and generates a response by the gpt-4o-mini model and returns back the results.
+
+**HTTP Method Type** : POST
 
 **_Params_**
 
@@ -125,12 +128,13 @@ curl --location 'http://localhost:8000/models/gpt-4o-mini' \
     "data": "81 divided by 9 is 9"
 }
 ```
-### 3. Models : GEMINI 1.5 PRO API(POST)
+### 3. Models : GEMINI 1.5 PRO API
 
 This api exposes Gemini 1.5 Pro model to be invoked and consumed by Applications. It takes the prompt in the request body and generates a response by the gpt-4o-mini model and returns back the results.
 
-**_Params_**
+**HTTP Method Type** : POST
 
+**_Params_**
 - prompt
 
 **Endpoint**
@@ -160,6 +164,8 @@ curl --location 'http://localhost:8000/models/gemini-1.5-pro' \
 ### 4. RAG Embeddings Generation from Text File
 
 This api is used to generate embeddings from a text file and store the embeddings vector store in chroma db inside the embeddings_db/{outputFolderName} folder. The api fetches the file from the rag_train_data/{inputFileName}.txt file and creates embeddings using the  . To generate the embeddings we use OpenAI's text-embedding-3-small model  
+
+**HTTP Method Type** : POST
 
 **_Params_**
 
@@ -206,4 +212,110 @@ curl --location 'http://localhost:8000/rag/generateEmbeddingsFromTextFile' \
     "data": "Chroma db written to /Users/mdhumaidhusain/python-ai/fastapi-server/emdeddings_db/chroma_db"
 }
 ```
+
+### 5. RAG Retrieval From Existing Chroma DB Vector Store Generated Previously
+
+This api is used to 
+
+**HTTP Method Type** : POST
+
+**_Params_**
+
+- inputFileName
+- outputFolderName
+
+**Endpoint**
+
+```
+http://localhost:8000/rag/generateEmbeddingsFromTextFile
+```
+
+**Curl Example**
+```curl
+curl --location 'http://localhost:8000/rag/generateEmbeddingsFromTextFile' \
+--header 'Content-Type: application/json' \
+--data '{
+    "inputFileName":"sample_training_file.txt",
+    "outputFolderName":"chroma_db"
+}'
+```
+**Sample File Not Found Response**
+```json
+{
+    "httpCode": 404,
+    "msg": "dasd.txt not found",
+    "data": ""
+}
+```
+**Sample Vector Store Already Exists for output name Response**
+```json
+{
+    "httpCode": 409,
+    "msg": "vetor store in chroma_db already exists",
+    "data": ""
+}
+```
+
+**Sample Successful Response**
+```json
+{
+    "httpCode": 201,
+    "msg": "Successfully Created Vector Store",
+    "data": "Chroma db written to /Users/mdhumaidhusain/python-ai/fastapi-server/emdeddings_db/chroma_db"
+}
+```
+
+### 6. Generate Response From GPT-4-MINI MODEL after Data Retrieval From RAG Vector Store
+
+This api is used to 
+
+**HTTP Method Type** : POST
+
+**_Params_**
+
+- inputFileName
+- outputFolderName
+
+**Endpoint**
+
+```
+http://localhost:8000/rag/generateEmbeddingsFromTextFile
+```
+
+**Curl Example**
+```curl
+curl --location 'http://localhost:8000/rag/generateEmbeddingsFromTextFile' \
+--header 'Content-Type: application/json' \
+--data '{
+    "inputFileName":"sample_training_file.txt",
+    "outputFolderName":"chroma_db"
+}'
+```
+**Sample File Not Found Response**
+```json
+{
+    "httpCode": 404,
+    "msg": "dasd.txt not found",
+    "data": ""
+}
+```
+**Sample Vector Store Already Exists for output name Response**
+```json
+{
+    "httpCode": 409,
+    "msg": "vetor store in chroma_db already exists",
+    "data": ""
+}
+```
+
+**Sample Successful Response**
+```json
+{
+    "httpCode": 201,
+    "msg": "Successfully Created Vector Store",
+    "data": "Chroma db written to /Users/mdhumaidhusain/python-ai/fastapi-server/emdeddings_db/chroma_db"
+}
+```
+
+
 
