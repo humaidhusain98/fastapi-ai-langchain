@@ -164,7 +164,7 @@ This api is used to generate embeddings from a text file and store the embedding
 **_Params_**
 
 - inputFileName
-- outputFileName
+- outputFolderName
 
 **Endpoint**
 
@@ -177,8 +177,8 @@ http://localhost:8000/rag/generateEmbeddingsFromTextFile
 curl --location 'http://localhost:8000/rag/generateEmbeddingsFromTextFile' \
 --header 'Content-Type: application/json' \
 --data '{
-    "inputFileName":"odyssey.txt",
-    "outputFileName":"chroma_db"
+    "inputFileName":"sample_training_file.txt",
+    "outputFolderName":"chroma_db"
 }'
 ```
 **Sample File Not Found Response**
