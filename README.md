@@ -159,7 +159,7 @@ curl --location 'http://localhost:8000/models/gemini-1.5-pro' \
 
 ### 4. RAG Embeddings Generation from Text File
 
-This api is used to generate embeddings from a text file and store the embeddings vector store in chroma db inside the embeddings_db/{outputFileName} folder. The api fetches the file from the rag_train_data/{inputFileName}.txt file and creates embeddings using the  . To generate the embeddings we use OpenAI's text-embedding-3-small model  
+This api is used to generate embeddings from a text file and store the embeddings vector store in chroma db inside the embeddings_db/{outputFolderName} folder. The api fetches the file from the rag_train_data/{inputFileName}.txt file and creates embeddings using the  . To generate the embeddings we use OpenAI's text-embedding-3-small model  
 
 **_Params_**
 
