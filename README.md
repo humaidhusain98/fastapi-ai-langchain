@@ -17,13 +17,13 @@ This Repository contains a Fastapi server which has apis to use models like chat
 
 - [Installation Instructions](#installation-instructions)
 - [Start Instructions](#start-instructions)
-- [All Endpoints ](https://github.com/humaidhusain98/fastapi-ai-langchain/edit/main/README.md#all-endpoints)
-	- [1. Server Check API](https://github.com/humaidhusain98/fastapi-ai-langchain/edit/main/README.md#1-server-check-api)
-	- [2. Models : GPT 4o MINI API](https://github.com/humaidhusain98/fastapi-ai-langchain/edit/main/README.md#2-models--gpt-4o-mini-api)
- 	- [3. Models : GEMINI 1.5 PRO API](https://github.com/humaidhusain98/fastapi-ai-langchain/edit/main/README.md#3-models--gemini-15-pro-api)
-  	- [4. RAG Embeddings Generation from Text File](https://github.com/humaidhusain98/fastapi-ai-langchain/edit/main/README.md#4-rag-embeddings-generation-from-text-file)
-  	- [5. RAG Retrieval From Existing Chroma DB Vector Store Generated Previously](https://github.com/humaidhusain98/fastapi-ai-langchain/edit/main/README.md#5-rag-retrieval-from-existing-chroma-db-vector-store-generated-previously)
-  	- [6. Generate Response From GPT-4-MINI MODEL after Data Retrieval From RAG Vector Store](https://github.com/humaidhusain98/fastapi-ai-langchain/edit/main/README.md#6-generate-response-from-gpt-4-mini-model-after-data-retrieval-from-rag-vector-store)
+- [All Endpoints ](#all-endpoints)
+	- [1. Server Check API](#1-server-check-api)
+	- [2. Models : GPT 4o MINI API](#2-models--gpt-4o-mini-api)
+ 	- [3. Models : GEMINI 1.5 PRO API](#3-models--gemini-15-pro-api)
+  	- [4. RAG Embeddings Generation from Text File](#4-rag-embeddings-generation-from-text-file)
+  	- [5. RAG Retrieval From Existing Chroma DB Vector Store Generated Previously](#5-rag-retrieval-from-existing-chroma-db-vector-store-generated-previously)
+  	- [6. Generate Response From GPT-4-MINI MODEL after Data Retrieval From RAG Vector Store](#6-generate-response-from-gpt-4-mini-model-after-data-retrieval-from-rag-vector-store)
  	
 
 ## Installation Instructions
