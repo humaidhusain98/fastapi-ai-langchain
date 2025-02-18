@@ -8,7 +8,7 @@ This Repository contains a Fastapi server which has apis to use models like chat
 
 ## 🛠 Features
 - 🔗 RESTful APIs with FastAPI
-- 📜 Auto-generated Swagger & ReDoc API documentation
+- 📜 Auto-generated Swagger 
 - 🗄️ Database integration with migrations support
 - 🧪 Ready for development and production setups
 
